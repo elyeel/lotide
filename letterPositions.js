@@ -13,5 +13,5 @@ const letterPositions = function(sentence) {
   }
   return results;
 };
-console.log(letterPositions('hello'));
+console.log(letterPositions('lighthouse in the house'));
 // pls modify manually index 'i' to utilize sentence.entries()
