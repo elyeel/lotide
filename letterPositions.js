@@ -14,3 +14,4 @@ const letterPositions = function(sentence) {
   return results;
 };
 console.log(letterPositions('hello'));
+// pls modify manually index 'i' to utilize sentence.entries()
