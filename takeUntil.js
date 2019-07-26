@@ -2,15 +2,15 @@ const takeUntil = function(array, callback) {
   let result = []; // ...
   let flag = false;
   array.forEach(function(arr) {
-    if (callback(arr)){
-      flag = true //console.log(result);
-    } else if (!flag){
+    if (callback(arr)) {
+      flag = true; //console.log(result);
+    } else if (!flag) {
       result.push(arr);
     }
   });
-        return result;
+  return result;
 //console.log(result);
-}
+};
 
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
