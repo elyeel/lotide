@@ -1,24 +1,26 @@
-const assertArraysEqual = function(arrOne, arrTwo) {
-  let resultOne = '', resultTwo = '';
-  if (arrOne.length === arrTwo.length) {
-    for (let i = 0; i < arrOne.length; i++) {
-      resultOne += arrOne[i];
-      resultTwo += arrTwo[i];
-    }
-  } else {
-    return (console.log('❌❌❌ ' + arrOne + ' !== ' + arrTwo));
+// const assertArraysEqual = function(arrOne, arrTwo) {
+//   let resultOne = '', resultTwo = '';
+//   if (arrOne.length === arrTwo.length) {
+//     for (let i = 0; i < arrOne.length; i++) {
+//       resultOne += arrOne[i];
+//       resultTwo += arrTwo[i];
+//     }
+//   } else {
+//     return (console.log('❌❌❌ ' + arrOne + ' !== ' + arrTwo));
     
-  }
-  if (resultOne === resultTwo) {
-    console.log('✔️ ✔️ ✔️  ' + arrOne + ' === ' + arrTwo);
-  } else {
-    console.log('❌❌❌ ' + arrOne + ' !== ' + arrTwo);
-  }
-};
+//   }
+//   if (resultOne === resultTwo) {
+//     console.log('✔️ ✔️ ✔️  ' + arrOne + ' === ' + arrTwo);
+//   } else {
+//     console.log('❌❌❌ ' + arrOne + ' !== ' + arrTwo);
+//   }
+// };
+
+const assertArraysEqual = require('./assertArraysEqual');
 
 const middle = function(arr) {
   let arrResult = [];
-  if (arr.length > 2) {//only if array length > 2
+  if (arr.length >= 2) {//only if array length > 2
     if (arr.length % 2 === 0) {//for even array length
       arrResult.push(arr[((arr.length) / 2) - 1]);
       arrResult.push(arr[(arr.length) / 2]);
@@ -27,7 +29,5 @@ const middle = function(arr) {
     }
   } return arrResult;
 };
+module.exports = middle;
 
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]),[3, 4]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]),[3]);
-assertArraysEqual(middle([1, 2]),[1, 2]);
